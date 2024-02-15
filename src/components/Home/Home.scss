@@ -1,0 +1,75 @@
+.home-wrapper {
+  height: 100vh;
+  background-image: url("../../assets/images/background-img.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: relative;
+  .home-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 74px;
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      img {
+        width: 70px;
+        height: 40px;
+        object-fit: contain;
+      }
+      .border {
+        width: 1px;
+        height: 18px;
+        background: #303030;
+      }
+      h4 {
+        font-size: 26px;
+        font-family: "Poiret One", sans-serif;
+        font-weight: 400;
+        color: #000;
+      }
+    }
+    .menu-icon {
+      cursor: pointer;
+      img {
+        width: 26px;
+      }
+    }
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 280px);
+    flex-direction: column;
+
+    h4 {
+      font-size: 70px;
+      text-align: center;
+      font-family: "Josefin Sans", sans-serif;
+      font-weight: 300;
+      line-height: 90px;
+      letter-spacing: 1.2px;
+      span {
+        font-weight: 500;
+      }
+    }
+    p {
+      text-align: center;
+      margin-top: 28px;
+      font-family: "Josefin Sans", sans-serif;
+      font-weight: 300;
+      font-size: 26px;
+    }
+  }
+  .sound {
+    position: absolute;
+    bottom: 70px;
+    right: 74px;
+    img {
+      width: 80px;
+    }
+  }
+}

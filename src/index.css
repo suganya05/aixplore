@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poiret+One&display=swap");
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff4ec;
+}
+
+.mx {
+  max-width: 2000px;
+  width: 100%;
+  margin: 0 auto;
+}
