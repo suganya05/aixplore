@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../../assets/logo/logo.png";
 import Menu from "../../assets/icons/Menu.png";
 import Sound from "../../assets/images/sound.png";
 import "./Home.scss";
+import Menubar from "../Menubar";
 
 const Home: React.FC = () => {
+  const [isOpen, setOpen] = useState(false);
   return (
     <div className="home-wrapper mx">
       <div className="home-head">
@@ -27,11 +29,12 @@ const Home: React.FC = () => {
           Crafting digital products with <span>soul,</span>
           <br /> enchanting users with <span>love.</span>
         </h4>
-        <p>We don't just provide solutions; we take care of them.</p>
+        <p>We don't just provide solutions, we take care of them.</p>
       </div>
       <div className="sound">
         <img src={Sound} alt="" />
       </div>
+      {isOpen && <Menubar />}
     </div>
   );
 };

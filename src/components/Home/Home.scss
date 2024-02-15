@@ -15,7 +15,7 @@
       align-items: center;
       gap: 12px;
       img {
-        width: 70px;
+        width: 55px;
         height: 40px;
         object-fit: contain;
       }
@@ -25,7 +25,7 @@
         background: #303030;
       }
       h4 {
-        font-size: 26px;
+        font-size: 24px;
         font-family: "Poiret One", sans-serif;
         font-weight: 400;
         color: #000;
@@ -46,7 +46,7 @@
     flex-direction: column;
 
     h4 {
-      font-size: 70px;
+      font-size: 60px;
       text-align: center;
       font-family: "Josefin Sans", sans-serif;
       font-weight: 300;
@@ -61,15 +61,15 @@
       margin-top: 28px;
       font-family: "Josefin Sans", sans-serif;
       font-weight: 300;
-      font-size: 26px;
+      font-size: 24px;
     }
   }
   .sound {
     position: absolute;
-    bottom: 70px;
-    right: 74px;
+    bottom: 40px;
+    right: 40px;
     img {
-      width: 80px;
+      width: 60px;
     }
   }
 }
