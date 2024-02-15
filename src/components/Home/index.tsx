@@ -7,6 +7,11 @@ import Menubar from "../Menubar";
 
 const Home: React.FC = () => {
   const [isOpen, setOpen] = useState(false);
+
+  const toggleMenubar = () => {
+    setOpen(!isOpen);
+  };
+
   return (
     <div className="home-wrapper mx">
       <div className="home-head">
@@ -20,7 +25,7 @@ const Home: React.FC = () => {
           <div className="border"></div>
           <h4>Aixplore</h4>
         </div>
-        <div className="menu-icon">
+        <div className="menu-icon" onClick={toggleMenubar}>
           <img src={Menu} alt="" />
         </div>
       </div>
@@ -34,7 +39,7 @@ const Home: React.FC = () => {
       <div className="sound">
         <img src={Sound} alt="" />
       </div>
-      {isOpen && <Menubar />}
+      {isOpen && <Menubar setOpen={setOpen} />}
     </div>
   );
 };

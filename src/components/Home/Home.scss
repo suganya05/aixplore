@@ -48,7 +48,6 @@
     h4 {
       font-size: 60px;
       text-align: center;
-      font-family: "Josefin Sans", sans-serif;
       font-weight: 300;
       line-height: 90px;
       letter-spacing: 1.2px;
@@ -59,15 +58,15 @@
     p {
       text-align: center;
       margin-top: 28px;
-      font-family: "Josefin Sans", sans-serif;
       font-weight: 300;
       font-size: 24px;
     }
   }
   .sound {
-    position: absolute;
+    position: fixed;
     bottom: 40px;
     right: 40px;
+    z-index: 10000;
     img {
       width: 60px;
     }
