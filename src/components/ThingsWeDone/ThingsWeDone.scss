@@ -1,0 +1,83 @@
+.heroParallax-wrapper {
+  height: 110vh;
+  padding: 40px 0;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-self: auto;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  .heading {
+    h2 {
+      font-size: 34px;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 90px;
+      letter-spacing: 1.6px;
+    }
+  }
+  .heroParallax-first-row {
+    display: flex;
+    flex-direction: row-reverse;
+    --tw-space-x-reverse: 1;
+    margin-left: 80px;
+    margin-bottom: 80px;
+    gap: 30px;
+  }
+  .heroParallax-second-row {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-bottom: 80px;
+    margin-left: 80px;
+  }
+}
+
+.productCard-wrapper {
+  height: 300px;
+  width: 480px;
+  position: relative;
+  flex-shrink: 0;
+  //   &:hover {
+  //     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  //   }
+  .block {
+    display: block;
+    // &:hover {
+    //   transition: box-shadow 0.3s ease;
+    // }
+    .images {
+      object-fit: cover;
+      object-position: left top;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      inset: 0px;
+    }
+  }
+  .overlay {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    // &:hover {
+    //   opacity: 0.8;
+    //   background-color: rgb(0 0 0);
+    //   pointer-events: none;
+    // }
+  }
+  .title {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    opacity: 0;
+    // &:hover {
+    //   color: rgb(255 255 255);
+    //   opacity: 1;
+    // }
+  }
+}

@@ -28,7 +28,7 @@ const HorizontalScrollCarousel = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-47%"]);
 
   return (
-    <section ref={targetRef} className="section-container">
+    <section ref={targetRef} className="section-container mx">
       <div className="sticky-container">
         <motion.div style={{ x }} className="card-container">
           <div className="services-container">

@@ -8,7 +8,7 @@ import "./Footer.scss";
 
 const Footer: React.FC = () => {
   return (
-    <div className="footer-wrapper">
+    <div className="footer-wrapper mx">
       <div className="head">
         <h5>Small Team</h5>
         <h1>Big Results</h1>
