@@ -4,6 +4,8 @@ import ImgThree from "../assets/images/img-3.png";
 import ImgFour from "../assets/images/img-4.png";
 import ImgFive from "../assets/images/img-5.png";
 import ImgSix from "../assets/images/img-6.png";
+import ImgSeven from "../assets/images/img-7.png";
+import ImgEight from "../assets/images/img-8.png";
 
 export const products = [
   {
@@ -36,5 +38,15 @@ export const products = [
     title: "Pixel Perfect",
     link: "https://app.pixelperfect.quest",
     thumbnail: ImgSix,
+  },
+  {
+    title: "Pixel Perfect",
+    link: "https://app.pixelperfect.quest",
+    thumbnail: ImgSeven,
+  },
+  {
+    title: "Pixel Perfect",
+    link: "https://app.pixelperfect.quest",
+    thumbnail: ImgEight,
   },
 ];

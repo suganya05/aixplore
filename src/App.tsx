@@ -1,6 +1,6 @@
 import React from "react";
 import Home from "./components/Home";
-import Services from "./components/Services";
+// import Services from "./components/Services";
 // import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
 import Service from "./components/Service";
@@ -13,7 +13,7 @@ const App: React.FC = () => {
       <Home />
       <HeroParallax products={products} />
       <Service />
-      <Services />
+      {/* <Services /> */}
       {/* <Testimonials /> */}
       <Footer />
     </div>
