@@ -22,3 +22,13 @@ body {
 a {
   text-decoration: none;
 }
+
+.bg-color-1 {
+  background-color: #ffeed5; /* Light Red */
+}
+.bg-color-2 {
+  background-color: #ffeed5; /* Light Green */
+}
+.bg-color-3 {
+  background-color: #daf6ff; /* Light Blue */
+}

@@ -18,8 +18,8 @@ export const HeroParallax = ({
     thumbnail: string;
   }[];
 }) => {
-  const firstRow = products.slice(0, 4);
-  const secondRow = products.slice(4, 8);
+  const firstRow = products.slice(0, 5);
+  const secondRow = products.slice(7, 10);
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
