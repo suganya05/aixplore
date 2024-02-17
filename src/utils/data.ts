@@ -11,54 +11,44 @@ import ImgTen from "../assets/images/img-10.jpeg";
 
 export const products = [
   {
-    title: "Moonbeam",
     link: "https://gomoonbeam.com",
     thumbnail: ImgOne,
   },
   {
-    title: "Cursor",
     link: "https://cursor.so",
     thumbnail: ImgTwo,
   },
   {
-    title: "Rogue",
     link: "https://userogue.com",
     thumbnail: ImgThree,
   },
 
   {
-    title: "Editorially",
     link: "https://editorially.org",
     thumbnail: ImgFour,
   },
   {
-    title: "Editrix AI",
     link: "https://editrix.ai",
     thumbnail: ImgFive,
   },
   {
-    title: "Pixel Perfect",
+    link: "https://app.pixelperfect.quest",
+    thumbnail: ImgTen,
+  },
+  {
     link: "https://app.pixelperfect.quest",
     thumbnail: ImgSix,
   },
   {
-    title: "Pixel Perfect",
     link: "https://app.pixelperfect.quest",
     thumbnail: ImgSeven,
   },
   {
-    title: "Pixel Perfect",
     link: "https://app.pixelperfect.quest",
     thumbnail: ImgEight,
   },
   {
-    title: "Pixel Perfect",
     link: "https://app.pixelperfect.quest",
     thumbnail: ImgNine,
-  },
-  {
-    title: "Pixel Perfect",
-    link: "https://app.pixelperfect.quest",
-    thumbnail: ImgTen,
   },
 ];

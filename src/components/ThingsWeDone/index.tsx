@@ -19,7 +19,7 @@ export const HeroParallax = ({
   }[];
 }) => {
   const firstRow = products.slice(0, 5);
-  const secondRow = products.slice(7, 10);
+  const secondRow = products.slice(5, 10);
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -87,32 +87,16 @@ export const ProductCard = ({
       }}
       key={product.title}
       className="productCard-wrapper"
-      //   className="group/product h-96 w-[30rem] relative flex-shrink-0"
     >
-      <Link
-        to={product.link}
-        className="block"
-        //   className="block group-hover/product:shadow-2xl"
-      >
+      <Link to={product.link} className="block">
         <img
           src={product.thumbnail}
           height="600"
           width="600"
           className="images"
-          //   className="object-cover object-left-top absolute h-full w-full inset-0"
           alt={product.title}
         />
       </Link>
-      <div
-        className="overlay"
-        //   className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"
-      ></div>
-      <h2
-        className="title"
-        //   className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white"
-      >
-        {product.title}
-      </h2>
     </motion.div>
   );
 };
