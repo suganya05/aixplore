@@ -1,11 +1,12 @@
 .services-wrapper {
-  height: 100vh;
   position: relative;
-
   .services-container {
     margin-left: 60px;
     margin-right: 64px;
-    margin-top: 150px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     .services-head {
       background: #ffdbba;
       width: fit-content;
@@ -60,6 +61,7 @@
         background-color: #fff;
         border-radius: 45px;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        margin-top: 20px;
 
         &:hover::before {
           transform: scale(1.1);

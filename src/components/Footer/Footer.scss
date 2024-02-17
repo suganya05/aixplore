@@ -1,0 +1,81 @@
+.footer-wrapper {
+  height: 100vh;
+  background-image: url("../../assets/images/background-img.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  .head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+    h5 {
+      font-size: 28px;
+      margin-bottom: 40px;
+      font-weight: 500;
+    }
+    h1 {
+      font-size: 60px;
+      font-weight: 500;
+    }
+    p {
+      color: #656565;
+      font-size: 20px;
+      font-weight: 500;
+      margin-top: 30px;
+      text-align: center;
+      line-height: 28px;
+    }
+    .btn {
+      margin-top: 60px;
+      button {
+        background: #ffdbba;
+        padding: 20px 44px;
+        border: none;
+        outline: none;
+        color: #d17406;
+        font-size: 14px;
+        font-weight: 600;
+        border-radius: 50px;
+        letter-spacing: 1.6px;
+        cursor: pointer;
+      }
+    }
+  }
+  .footer-end {
+    padding-bottom: 45px;
+    margin: 0 120px;
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 42px;
+      border-bottom: 1px solid #a0a0a0;
+      padding-bottom: 36px;
+      a {
+        color: #404040;
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+    .copy-right {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 36px;
+      .copy-right-text {
+        p {
+          font-size: 18px;
+          font-weight: 600;
+        }
+      }
+      .footer-social-media-icon {
+        display: flex;
+        gap: 32px;
+        img {
+          width: 25px;
+        }
+      }
+    }
+  }
+}

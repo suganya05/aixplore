@@ -1,0 +1,39 @@
+.testimonials-wrapper {
+  .testimonials-container {
+    height: 150vh;
+    display: flex;
+    background: blue;
+    .testimonials-title {
+      width: 50%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .testimonials-pages {
+      width: 50%;
+
+      .testimonials-head {
+        height: 50vh;
+        &:nth-child(1) {
+          background: red;
+        }
+        &:nth-child(2) {
+          background: green;
+        }
+        &:nth-child(3) {
+          background: pink;
+        }
+        .testimonials-heading {
+          display: flex;
+          gap: 12px;
+          img {
+            width: 75px;
+            height: 75px;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+}

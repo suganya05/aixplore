@@ -14,22 +14,6 @@ import "./Services.scss";
 const Services: React.FC = () => {
   return (
     <div className="services-wrapper mx">
-      {/* <div className="services-container">
-        <div className="services-head">
-          <p>Services</p>
-        </div>
-        <div className="service-content">
-          <h5>
-            A Complete Digital Product <br /> team
-          </h5>
-          <p>
-            Designers, developers, and project managers unite, crafting success
-            stories with creativity, expertise, and flawless execution, ensuring
-            client triumph every time, delivering projects at their peak
-            potential.
-          </p>
-        </div>
-      </div> */}
       <HorizontalScrollCarousel />
     </div>
   );
