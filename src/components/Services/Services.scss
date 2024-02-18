@@ -1,40 +1,25 @@
 .services-wrapper {
   position: relative;
   .services-container {
-    margin-left: 60px;
-    margin-right: 64px;
     height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    .services-head {
-      background: #ffdbba;
-      width: fit-content;
-      display: flex;
-      align-items: center;
-      padding: 16px 55px;
-      border-radius: 45px;
-      p {
-        color: #d17406;
-        font-size: 18px;
-        font-weight: 700;
-      }
-    }
+    align-items: center;
+    width: 25%;
+
     .service-content {
       margin-top: 30px;
       h5 {
         font-size: 36px;
         letter-spacing: 1.4px;
-        font-weight: 600;
-        line-height: 36px;
+        font-weight: 300;
+        line-height: 52px;
         margin-bottom: 20px;
-      }
-      p {
-        font-size: 23px;
-        font-weight: 500;
-        color: #242424;
-        line-height: 40px;
-        max-width: 900px;
+        color: #404040;
+        span {
+          font-weight: 500;
+        }
       }
     }
   }
@@ -52,15 +37,11 @@
     overflow: hidden;
     .card-container {
       display: flex;
-      gap: 40px;
       .card {
         position: relative;
         height: 700px;
-        width: 1200px;
+        width: 1000px;
         overflow: hidden;
-        background-color: #fff;
-        border-radius: 45px;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         margin-top: 20px;
 
         &:hover::before {
@@ -81,55 +62,29 @@
             rgba(255, 255, 255, 0)
           );
 
-          .heading {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            h2 {
-              font-size: 32px;
-              font-weight: 600;
-            }
-            .border-bottom {
-              border-bottom: 0.2px solid #000;
-              width: 200px;
-              margin-bottom: -16px;
-            }
-            h4 {
-              font-size: 36px;
-              font-weight: 500;
-            }
-          }
-          .para {
-            margin: 32px 0;
-            p {
-              line-height: 32px;
-              font-size: 22px;
-            }
-          }
-          .figma-images {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-            flex-wrap: wrap;
-            .icon-box {
-              border: 1px solid #242424;
-              border-radius: 12px;
-              padding: 20px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              flex-direction: column;
-              h3 {
-                color: #d17406;
-                font-size: 22px;
-                font-weight: 600;
-                margin-bottom: 20px;
-                white-space: nowrap;
+          .testimonials-pages {
+            .testimonials-head {
+              .testimonials-heading {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                margin-bottom: 22px;
+                img {
+                  width: 42px;
+                }
+                h4 {
+                  font-size: 20px;
+                  font-weight: 300;
+                  margin-bottom: -10px;
+                }
               }
-              img {
-                width: 50px;
-                height: 50px;
-                object-fit: contain;
+              .testimonials-description {
+                margin-left: 52px;
+                p {
+                  font-size: 20px;
+                  font-weight: 400;
+                  line-height: 32px;
+                }
               }
             }
           }

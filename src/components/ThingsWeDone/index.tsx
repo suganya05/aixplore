@@ -6,15 +6,12 @@ import {
   useSpring,
   MotionValue,
 } from "framer-motion";
-import { Link } from "react-router-dom";
 import "./ThingsWeDone.scss";
 
 export const HeroParallax = ({
   products,
 }: {
   products: {
-    title: string;
-    link: string;
     thumbnail: string;
   }[];
 }) => {
@@ -45,20 +42,12 @@ export const HeroParallax = ({
       <motion.div>
         <motion.div className="heroParallax-first-row">
           {firstRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateX}
-              key={product.title}
-            />
+            <ProductCard product={product} translate={translateX} />
           ))}
         </motion.div>
         <motion.div className="heroParallax-second-row">
           {secondRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateXReverse}
-              key={product.title}
-            />
+            <ProductCard product={product} translate={translateXReverse} />
           ))}
         </motion.div>
       </motion.div>
@@ -71,8 +60,6 @@ export const ProductCard = ({
   translate,
 }: {
   product: {
-    title: string;
-    link: string;
     thumbnail: string;
   };
   translate: MotionValue<number>;
@@ -85,18 +72,16 @@ export const ProductCard = ({
       whileHover={{
         y: -20,
       }}
-      key={product.title}
       className="productCard-wrapper"
     >
-      <Link to={product.link} className="block">
+      <div className="block">
         <img
           src={product.thumbnail}
           height="600"
           width="600"
           className="images"
-          alt={product.title}
         />
-      </Link>
+      </div>
     </motion.div>
   );
 };

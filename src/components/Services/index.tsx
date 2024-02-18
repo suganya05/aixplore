@@ -1,15 +1,28 @@
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
-import XD from "../../assets/icons/Xd.png";
-import Figma from "../../assets/icons/figma.png";
-import Illustrator from "../../assets/icons/Illustrator.png";
-import NextJs from "../../assets/icons/next.js.png";
-import NodeJs from "../../assets/icons/node.js.png";
-import ReactIcon from "../../assets/icons/react.png";
-import MongoDB from "../../assets/icons/mongoDb.png";
-import Blender from "../../assets/icons/blender.png";
-import GraphQL from "../../assets/icons/graphQL.png";
+import ProfileImg from "../../assets/images/profile.png";
 import "./Services.scss";
+
+const data = [
+  {
+    image: ProfileImg,
+    title: "Founder of Hacklido",
+    description:
+      "Working with Aixplore has been an absolute game-changer for our business. Not only did they deliver an exceptional product,but their dedication to our success truly sets them apart.",
+  },
+  {
+    image: ProfileImg,
+    title: "Founder of Hacklido",
+    description:
+      "Working with Aixplore has been an absolute game-changer for our business. Not only did they deliver an exceptional product,but their dedication to our success truly sets them apart.",
+  },
+  {
+    image: ProfileImg,
+    title: "Founder of Hacklido",
+    description:
+      "Working with Aixplore has been an absolute game-changer for our business. Not only did they deliver an exceptional product,but their dedication to our success truly sets them apart.",
+  },
+];
 
 const Services: React.FC = () => {
   return (
@@ -25,36 +38,28 @@ const HorizontalScrollCarousel = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-47%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-50%"]);
 
   return (
     <section ref={targetRef} className="section-container mx">
       <div className="sticky-container">
         <motion.div style={{ x }} className="card-container">
           <div className="services-container">
-            <div className="services-head">
-              <p>Services</p>
-            </div>
             <div className="service-content">
               <h5>
-                A Complete Digital Product <br /> team
+                What Our <br />
+                <span>Valued Customer</span> <br />
+                Says
               </h5>
-              <p>
-                Designers, developers, and project managers unite, crafting
-                success stories with creativity, expertise, and flawless
-                execution, ensuring client triumph every time, delivering
-                projects at their peak potential.
-              </p>
             </div>
           </div>
-          {items.map((item, index) => {
+          {data.map((item, index) => {
             return (
               <Card
                 key={index}
-                head={item.head}
-                number={item.number}
+                image={item.image}
+                title={item.title}
                 description={item.description}
-                figma={item.figma}
               />
             );
           })}
@@ -65,96 +70,30 @@ const HorizontalScrollCarousel = () => {
 };
 
 interface CardProps {
-  head: string;
-  number: string;
+  image: string;
+  title: string;
   description: string;
-  figma: {
-    title: string;
-    image: any;
-  }[];
 }
 [];
 
-const Card: React.FC<CardProps> = ({ head, number, description, figma }) => {
+const Card: React.FC<CardProps> = ({ image, title, description }) => {
   return (
     <div className="card">
       <div className="content">
-        <div className="heading">
-          <h2>{head}</h2>
-          <div className="border-bottom"></div>
-          <h4>{number}</h4>
-        </div>
-        <div className="para">
-          <p>{description}</p>
-        </div>
-
-        <div className="figma-images">
-          {figma.map((figmaItem, index) => (
-            <div key={index} className="icon-box">
-              <h3>{figmaItem.title}</h3>
-              <img src={figmaItem.image} alt={figmaItem.title} />
+        <div className="testimonials-pages">
+          <div className="testimonials-head">
+            <div className="testimonials-heading">
+              <img src={image} alt="" />
+              <h4>{title}</h4>
             </div>
-          ))}
+            <div className="testimonials-description">
+              <p>{description}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 };
-
-const items = [
-  {
-    head: "Design",
-    number: "01",
-    description:
-      "Our design process starts with a comprehensive case study of client requirements, followed by tailored approaches across various platforms for seamless user experiences.",
-
-    figma: [
-      {
-        title: "Figma",
-        image: Figma,
-      },
-      {
-        title: "Adobe XD",
-        image: XD,
-      },
-      {
-        title: "Illustrator",
-        image: Illustrator,
-      },
-    ],
-  },
-  {
-    head: "Development",
-    number: "02",
-    description:
-      "Our versatile team excels in web, app, and 3D development, leveraging cutting-edge technology to deliver top-tier products tailored to perfection.",
-    figma: [
-      {
-        title: "Next.js",
-        image: NextJs,
-      },
-      {
-        title: "React Native",
-        image: ReactIcon,
-      },
-      {
-        title: "Node.js",
-        image: NodeJs,
-      },
-      {
-        title: "MongoDB",
-        image: MongoDB,
-      },
-      {
-        title: "GraphQL",
-        image: GraphQL,
-      },
-      {
-        title: "Blender",
-        image: Blender,
-      },
-    ],
-  },
-];
 
 export default Services;
