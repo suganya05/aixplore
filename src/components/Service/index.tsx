@@ -1,56 +1,58 @@
 import React, { useEffect, useState } from "react";
-import Figma from "../../assets/icons/figma.png";
-import Illustrator from "../../assets/icons/Illustrator.png";
-import NextJs from "../../assets/icons/next.js.png";
-import NodeJs from "../../assets/icons/node.js.png";
-import ReactIcon from "../../assets/icons/react.png";
-import MongoDB from "../../assets/icons/mongoDb.png";
-import Blender from "../../assets/icons/blender.png";
-import GraphQL from "../../assets/icons/graphQL.png";
-import XD from "../../assets/icons/Xd.png";
+// import Figma from "../../assets/icons/figma.png";
+// import Illustrator from "../../assets/icons/Illustrator.png";
+// import NextJs from "../../assets/icons/next.js.png";
+// import NodeJs from "../../assets/icons/node.js.png";
+// import ReactIcon from "../../assets/icons/react.png";
+// import MongoDB from "../../assets/icons/mongoDb.png";
+// import Blender from "../../assets/icons/blender.png";
+// import GraphQL from "../../assets/icons/graphQL.png";
+// import XD from "../../assets/icons/Xd.png";
+import DesignIcons from "../../assets/images/design-icon-box.png";
+import DevelopmentIcons from "../../assets/images/development-icon-box.png";
 import "./Service.scss";
 
-const DesignData = [
-  {
-    title: "Figma",
-    image: Figma,
-  },
-  {
-    title: "Adobe XD",
-    image: XD,
-  },
-  {
-    title: "Illustrator",
-    image: Illustrator,
-  },
-];
+// const DesignData = [
+//   {
+//     title: "Figma",
+//     image: Figma,
+//   },
+//   {
+//     title: "Adobe XD",
+//     image: XD,
+//   },
+//   {
+//     title: "Illustrator",
+//     image: Illustrator,
+//   },
+// ];
 
-const DevelopmentData = [
-  {
-    title: "Next.js",
-    image: NextJs,
-  },
-  {
-    title: "React Native",
-    image: ReactIcon,
-  },
-  {
-    title: "Node.js",
-    image: NodeJs,
-  },
-  {
-    title: "MongoDB",
-    image: MongoDB,
-  },
-  {
-    title: "GraphQL",
-    image: GraphQL,
-  },
-  {
-    title: "Blender",
-    image: Blender,
-  },
-];
+// const DevelopmentData = [
+//   {
+//     title: "Next.js",
+//     image: NextJs,
+//   },
+//   {
+//     title: "React Native",
+//     image: ReactIcon,
+//   },
+//   {
+//     title: "Node.js",
+//     image: NodeJs,
+//   },
+//   {
+//     title: "MongoDB",
+//     image: MongoDB,
+//   },
+//   {
+//     title: "GraphQL",
+//     image: GraphQL,
+//   },
+//   {
+//     title: "Blender",
+//     image: Blender,
+//   },
+// ];
 
 const Service: React.FC = () => {
   const [scrollPercentage, setScrollPercentage] = useState(0);
@@ -109,14 +111,15 @@ const Service: React.FC = () => {
               </p>
             </div>
             <div className="second">
-              {DesignData.map((f, index) => {
+              <img src={DesignIcons} alt="" />
+              {/* {DesignData.map((f, index) => {
                 return (
                   <div key={index} className="box">
                     <h2>{f.title}</h2>
                     <img src={f.image} alt="" />
                   </div>
                 );
-              })}
+              })} */}
             </div>
           </div>
           <div className="design-wrapper">
@@ -128,7 +131,10 @@ const Service: React.FC = () => {
                 tailored to perfection.
               </p>
             </div>
-            <div className="flex-box">
+            <div className="second">
+              <img src={DevelopmentIcons} alt="" />
+            </div>
+            {/* <div className="flex-box">
               <div className="second">
                 {DevelopmentData.slice(0, 3).map((f, index) => {
                   return (
@@ -149,7 +155,7 @@ const Service: React.FC = () => {
                   );
                 })}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
