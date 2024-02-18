@@ -11,9 +11,9 @@ const App: React.FC = () => {
   return (
     <div>
       <Home />
-      <HeroParallax products={products} />
       <Service />
       <Services />
+      <HeroParallax products={products} />
       {/* <Testimonials /> */}
       <Footer />
     </div>

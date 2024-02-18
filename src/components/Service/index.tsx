@@ -9,6 +9,7 @@ import Blender from "../../assets/icons/blender.png";
 import GraphQL from "../../assets/icons/graphQL.png";
 import XD from "../../assets/icons/Xd.png";
 import "./Service.scss";
+import Exam from "../Exam";
 
 const DesignData = [
   {
@@ -68,7 +69,8 @@ const Service: React.FC = () => {
           potential.
         </p>
       </div>
-      <div className="sections">
+      <Exam />
+      {/* <div className="sections">
         <div>
           <div className="design-wrapper">
             <div className="first">
@@ -124,7 +126,7 @@ const Service: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
