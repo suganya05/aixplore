@@ -1,21 +1,39 @@
-import React, { useState } from "react";
-import Logo from "../../assets/logo/logo.png";
+import React, { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import Menu from "../../assets/icons/Menu.png";
 import Sound from "../../assets/images/sound.png";
+import LogoFirst from "../../assets/logo/logo-1.png";
+import logoSecond from "../../assets/logo/logo-2.png";
 import Menubar from "../Menubar";
 import "./Hero.scss";
 
 const Hero: React.FC = () => {
   const [isOpen, setOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenubar = () => {
     setOpen(!isOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 30) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="home-wrapper mx">
       <div className="home-head">
-        <div
+        {/* <div
           className="logo"
           contentEditable={true}
           style={{ outline: "none", cursor: "default" }}
@@ -24,7 +42,39 @@ const Hero: React.FC = () => {
           <img src={Logo} alt="" />
           <div className="border"></div>
           <h4>Aixplore</h4>
+        </div> */}
+        <div>
+          <AnimatePresence mode="wait">
+            <header className="header">
+              <div className="logo">
+                <motion.img
+                  key={"logo1"}
+                  src={LogoFirst}
+                  alt=""
+                  animate={{
+                    y: !isScrolled ? 0 : -27,
+                    opacity: !isScrolled ? 1 : 0,
+                  }}
+                  transition={{ type: "tween" }}
+                  className="img-1"
+                />
+                <motion.img
+                  key={"logo2"}
+                  src={logoSecond}
+                  alt=""
+                  animate={{
+                    y: isScrolled ? 0 : 27,
+                    opacity: isScrolled ? 1 : 0,
+                  }}
+                  transition={{ type: "tween" }}
+                  className="img-2"
+                />
+              </div>
+              <nav></nav>
+            </header>
+          </AnimatePresence>
         </div>
+
         <div className="menu-icon" onClick={toggleMenubar}>
           <img src={Menu} alt="" />
         </div>

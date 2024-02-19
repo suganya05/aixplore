@@ -10,12 +10,8 @@ const Footer: React.FC = () => {
   return (
     <div className="footer-wrapper mx">
       <div className="head">
-        <h5>Small Team</h5>
-        <h1>Big Results</h1>
-        <p>
-          There’s about 10 of us working to deliver results. 7 creatives and 3
-          ex missile engineer. <br /> Guess who keeps your project on track…
-        </p>
+        <p>The greatest gift you can give someone is your time</p>
+        <h1>Appreciate your time.</h1>
         <div className="btn">
           <button>SCHEDULE A CALL</button>
         </div>

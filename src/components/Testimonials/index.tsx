@@ -1,55 +1,3 @@
-// import React from "react";
-// import ProfileImg from "../../assets/images/profile.png";
-// import "./Testimonials.scss";
-
-// const data = [
-//   {
-//     image: ProfileImg,
-//     title: "Founder of Hacklido",
-//     description:
-//       "Working with Aixplore has been an absolute game-changer for our business. Not only did they deliver an exceptional product,but their dedication to our success truly sets them apart.",
-//   },
-//   {
-//     image: ProfileImg,
-//     title: "Founder of Hacklido",
-//     description:
-//       "Working with Aixplore has been an absolute game-changer for our business. Not only did they deliver an exceptional product,but their dedication to our success truly sets them apart.",
-//   },
-//   {
-//     image: ProfileImg,
-//     title: "Founder of Hacklido",
-//     description:
-//       "Working with Aixplore has been an absolute game-changer for our business. Not only did they deliver an exceptional product,but their dedication to our success truly sets them apart.",
-//   },
-// ];
-
-// const Testimonials: React.FC = () => {
-//   return (
-//     <div>
-//       <header></header>
-//       <div className="container">
-//         <section className="one clearfix">
-//           <div className="left">
-//             <div></div>
-//             <div></div>
-//             <div></div>
-//             <div></div>
-//           </div>
-//           <div className="right">
-//             <div className="right-child">
-//               <h2>Scroll</h2>
-//             </div>
-//           </div>
-//         </section>
-
-//         <div className="bottom"></div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Testimonials;
-
 import React from "react";
 import { useEffect } from "react";
 import gsap from "gsap";
@@ -99,11 +47,11 @@ function Testimonials() {
 
   return (
     <React.Fragment>
-      <Box className="gallery" sx={{ display: "flex" }}>
+      <Box className="gallery testimonials-wrapper" sx={{ display: "flex" }}>
         <Box
           className="rightblock"
           sx={{
-            width: "50%",
+            width: "10%",
             height: "100vh",
             display: "flex",
             flexDirection: "column",
