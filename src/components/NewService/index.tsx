@@ -11,7 +11,7 @@ import Blender from "../../assets/icons/blender.png";
 import GraphQL from "../../assets/icons/graphQL.png";
 import "./NewService.scss";
 
-export const NewService: React.FC = () => {
+const NewService: React.FC = () => {
   return (
     <div className="services-wrapper mx">
       <HorizontalScrollCarousel />
@@ -28,7 +28,7 @@ const HorizontalScrollCarousel = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-69%"]);
 
   return (
-    <section ref={targetRef} className="section-container">
+    <section ref={targetRef} className="section-container mx">
       <div className="sticky-container">
         <motion.div style={{ x }} className="card-container">
           <div className="service-container">
@@ -110,6 +110,8 @@ const HorizontalScrollCarousel = () => {
     </section>
   );
 };
+
+export default NewService;
 
 const DevelopmentData = [
   {

@@ -49,28 +49,26 @@
       gap: 200px;
       .card {
         position: relative;
-        height: 700px;
         width: 1500px;
         overflow: hidden;
         margin-top: 20px;
-
         &:hover::before {
           transform: scale(1.1);
         }
-
         .content {
           position: absolute;
           top: 50%;
           left: 30%;
           transform: translate(-20%, -50%);
           z-index: 10;
-
+          display: grid;
+          place-content: center;
           .design-wrapper {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 200px;
             margin: 0 auto;
-            height: 100vh;
             .first {
               display: flex;
               flex-direction: column;
@@ -95,7 +93,6 @@
               align-items: center;
               gap: 45px;
             }
-
             .second {
               display: flex;
               flex-direction: column;
