@@ -1,13 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Box from "@mui/material/Box";
+import { useMotionValueEvent, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Figma from "../../assets/icons/figma.png";
 import Illustrator from "../../assets/icons/Illustrator.png";
 import XD from "../../assets/icons/Xd.png";
+import DesignImg from "../../assets/images/design-icon-box.png";
+import DevelopmentImg from "../../assets/images/development-icon-box.png";
 import DesignIcons from "../../assets/images/design-icon-box.png";
 import DevelopmentIcons from "../../assets/images/development-icon-box.png";
 import "./Exam.scss";
+import { content } from "../../utils/data";
 gsap.registerPlugin(ScrollTrigger);
 
 const DesignData = [
@@ -26,6 +31,25 @@ const DesignData = [
 ];
 
 const Exam: React.FC = () => {
+  const backgroundColors = ["#FFE6E6", "#FFEAC9"];
+  const images = [DesignImg, DevelopmentImg];
+  const [activeCard, setActiveCard] = React.useState(0);
+  const ref = useRef<any>(null);
+  const { scrollYProgress } = useScroll({
+    container: ref,
+    offset: ["start start", "end start"],
+  });
+  const cardLength = content.length;
+
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    const cardsBreakpoints = content.map((_, index) => index / cardLength);
+    cardsBreakpoints.forEach((breakpoint, index) => {
+      if (latest > breakpoint - 0.2 && latest <= breakpoint) {
+        setActiveCard(() => index);
+      }
+    });
+  });
+
   useEffect(() => {
     let ctx = gsap.context(() => {
       gsap.set(".photo:not(:first-child)", { y: "110%" });
@@ -116,20 +140,28 @@ const Exam: React.FC = () => {
             "& .photo": {
               position: "absolute",
               width: "100%",
-              height: "90%",
+              // height: "100%",
               "& img": {
-                height: "100%",
+                // height: "100%",
                 width: "100%",
               },
             },
           }}
         >
-          <Box className="photo icons">
-            <img src={DesignIcons} alt="" />
+          {/* <Box className="photo icons">
+            <img src={DesignIcons} alt="img-1" />
           </Box>
           <Box className="photo icons ">
-            <img src={DevelopmentIcons} alt="" />
-          </Box>
+            <img src={DevelopmentIcons} alt="img-2" />
+          </Box> */}
+          <motion.div
+            animate={{
+              backgroundImage: images[activeCard % images.length],
+            }}
+            className="image"
+          >
+            <img src={images[activeCard % images.length]} alt="" />
+          </motion.div>
         </Box>
       </Box>
     </Box>

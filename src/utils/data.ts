@@ -42,3 +42,26 @@ export const products = [
     thumbnail: ImgNine,
   },
 ];
+
+export const content = [
+  {
+    title: "Design",
+    description:
+      "Our design process starts with a comprehensive case study of client requirements, followed by tailored approaches across various platforms for seamless user experiences.",
+  },
+  {
+    title: "Development",
+    description:
+      "Our versatile team excels in web, app, and 3D development, leveraging cutting-edge technology to deliver top-tier products tailored to perfection.",
+  },
+  // {
+  //   title: "Version control",
+  //   description:
+  //     "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+  // },
+  // {
+  //   title: "Running out of content",
+  //   description:
+  //     "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+  // },
+];

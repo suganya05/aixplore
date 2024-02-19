@@ -42,3 +42,15 @@
     }
   }
 }
+
+.image {
+  border-radius: 0.375rem;
+  position: sticky;
+  top: 50px;
+  overflow: hidden;
+  img {
+    max-height: 600px;
+    max-width: 600px;
+    object-fit: contain;
+  }
+}

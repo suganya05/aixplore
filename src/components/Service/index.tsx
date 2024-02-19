@@ -10,6 +10,8 @@ import GraphQL from "../../assets/icons/graphQL.png";
 import XD from "../../assets/icons/Xd.png";
 import "./Service.scss";
 import Exam from "../Exam";
+import { StickyScroll } from "../StickyScroll";
+import { content } from "../../utils/data";
 
 const DesignData = [
   {
@@ -69,8 +71,9 @@ const Service: React.FC = () => {
           potential.
         </p>
       </div>
-      <Exam />
-      {/* <div className="sections">
+      {/* <StickyScroll content={content} /> */}
+      {/* <Exam /> */}
+      <div className="sections">
         <div>
           <div className="design-wrapper">
             <div className="first">
@@ -126,7 +129,7 @@ const Service: React.FC = () => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
